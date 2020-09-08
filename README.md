@@ -1,12 +1,38 @@
-Create a React application that shows a table of songs with their information and metrics displayed by column (each row is a song, each column is a song attribute).
+ # iHeartMedia - Music Lab - Code Challenge
 
-Requirements:
+Create a React application that shows a list of songs with their information and metrics displayed. The app should have at least **2 pages (views)**:
+A landing page, and a page to show data coming from an API.
 
-1. Take the included song data file, use an AWS SAM CLI and a node.js lambda function to serve the frontend with the data.
-2. Do **not** use table elements (table, th, tr, td, ...).
-3. Include any necessary CSS but it doesn't need to be pretty.
-4. Allow the user to scroll vertically and horizontally through columns and rows that go off screen.
-5. Allow the user to sort the order of the song rows by the column values.
+- Everything should be written in JavaScript / Node.
 
+- Fork this repo and share the link when you are finished!
+
+### UI Checklist
+
+- Create a React App using functional based components and hooks. No class based components, please.
+
+- Create 2 views ( pages ) using React Router.
+
+- Create a page that renders a table displaying a list songs coming from the API. Each row is a song, each column is a song attribute. 
+
+- Employ **some** styling but it doesn't have to be much. You can use the styled-components library but do not use any other styling help.
+
+- Allow the user to scroll vertically and horizontally through columns and rows that go off screen.
+
+- Allow the user to sort the order of the song rows by the column values.
+
+- It **does not** need to be mobile responsive.
+
+### API Notes
+
+Store the included JSON file in an S3 bucket and use the AWS SAM CLI with a node.js lambda function to serve the frontend with the data.
+
+Authentication is not necessary.
+
+You do not need to deploy or host this anywhere.
 
 SAM CLI instructions: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html
+
+## Bonus
+
+Use GraphQL and/or Typescript
