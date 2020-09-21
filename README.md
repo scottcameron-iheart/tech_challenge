@@ -25,7 +25,7 @@ A landing page, and a page to show data coming from an API.
 
 ### API Notes
 
-Store the included JSON file in an S3 bucket and use the AWS SAM CLI with a node.js lambda function to serve the frontend with the data.
+Store the included JSON file in an S3 bucket and use the AWS SAM CLI with a node.js or python lambda function to serve the frontend with the data.
 
 Authentication is not necessary.
 
