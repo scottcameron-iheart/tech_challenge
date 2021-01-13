@@ -1,18 +1,8 @@
-## iHeartMedia - Music Lab - Code Challenge
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Project Structure:
-
-1. Server: Contains Lambda Function(index.js) in Node.js to pull data from s3 bucket
-
-   API: https://r5c0d1qq27.execute-api.us-east-2.amazonaws.com/beta
-
-2. Client: This folder contains front-end code in React. 
 
 ## Available Scripts
 
-In the project directory/client you can run:
+In the project directory, you can run:
 
 ### `yarn start`
 
