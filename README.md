@@ -14,6 +14,7 @@ A landing page, and a page to show data coming from an API.
 - [ ] Create 2 views ( pages ) using React Router.
 
 - [ ] Create a page that renders a table displaying a list songs coming from the API. Each row is a song, each column is a song attribute. 
+ - [ ] Do not use `table` tags
 
 - [ ] Employ **some** styling but it doesn't have to be much. You can use the styled-components library but do not use any other styling help.
 
