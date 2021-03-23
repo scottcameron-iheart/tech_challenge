@@ -3,7 +3,7 @@
 Create a React application that shows a list of songs with their information and metrics displayed. The app should have at least **2 pages (views)**:
 A landing page, and a page to show data coming from an API.
 
-- Everything should be written in JavaScript / Node.
+- Use typescript and graphql for everything where applicable.
 
 - Fork this repo and share the link when you are finished!
 
@@ -32,7 +32,3 @@ Authentication is not necessary.
 You do not need to deploy or host this anywhere.
 
 SAM CLI instructions: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html
-
-## Bonus
-
-Use GraphQL and/or Typescript
