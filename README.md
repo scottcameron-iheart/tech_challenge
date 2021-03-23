@@ -27,7 +27,7 @@ A landing page, and a page to show data coming from an API.
 
 Store the included JSON file in an S3 bucket and use the AWS SAM CLI with a **node.js** lambda function to serve the frontend with the data.
 
-- [] Authentication is not necessary.
+- [ ] Authentication is not necessary.
 
 You do not need to deploy or host this anywhere.
 
