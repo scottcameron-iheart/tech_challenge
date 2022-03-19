@@ -16,23 +16,20 @@ export const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGat
 
     const s3 = new S3();
     const bucket: string = 'iheart-bucket-henry-2022';
-    const key: string = 'songData';
+    const key: string = 'songData.json';
     const params: S3.Types.GetObjectRequest = {
         Bucket: bucket,
         Key: key,
     };
 
     try {
-        const data = await s3.getObject(params);
-
-        console.log(JSON.stringify(data));
-
-        console.log('changed file')
-
+        const data = await s3.getObject(params).promise();
+        const body = data.Body?.toString() ?? "";
+        const content = JSON.parse(body);
         response = {
             statusCode: 200,
             body: JSON.stringify({
-                message: 'changed the file',
+                data: content,
             }),
         };
     } catch (err) {
