@@ -5,8 +5,8 @@ class SongDataApi {
         this.songData = [];
     }
 
-    getSongData(url) {
-
+    getSongData() {
+        const url = 'http://localhost:3000'
     }
 
 }
