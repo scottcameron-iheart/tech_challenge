@@ -1,18 +1,12 @@
 import React from 'react';
 import logo from '../logo.svg';
+import { Link } from 'react-router-dom';
 
 function LandingPage() {
     return (
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Go To Song Data
-            </a>
+            <Link to="/songs">Go To Song Page</Link>
         </header>
     )
 }
