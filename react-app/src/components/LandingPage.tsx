@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../logo.svg';
 
-function Landing() {
+function LandingPage() {
     return (
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
@@ -17,4 +17,4 @@ function Landing() {
     )
 }
 
-export default Landing;
+export default LandingPage;
