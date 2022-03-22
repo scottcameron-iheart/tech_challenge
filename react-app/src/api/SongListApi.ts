@@ -6,8 +6,7 @@ export default class SongListApi {
         const url = 'http://localhost:3000/songs';
         try {
             const response = await axios.get(url, {
-                withCredentials: true,
-                headers: { 'Access-Control-Allow-Origin': '*' },
+                withCredentials: true
             });
             const data = JSON.parse(response.data);
             return new Promise(resolve => resolve(data));

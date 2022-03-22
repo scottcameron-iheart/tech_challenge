@@ -7,6 +7,12 @@ Description: >
 Globals:
   Function:
     Timeout: 10
+  Api:
+    Cors:
+        AllowCredentials: "'true'"
+        AllowOrigin: "'http://localhost:4000'"
+        AllowMethods: "'POST, GET, OPTIONS'"
+        AllowHeaders: "'content-type'"
 
 Resources:
   SongDataFunction:
@@ -22,7 +28,7 @@ Resources:
           Type: Api 
           Properties:
             Path: /songs
-            Method: get
+            Method: ANY
     Metadata:
       BuildMethod: esbuild
       BuildProperties:

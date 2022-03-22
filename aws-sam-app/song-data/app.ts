@@ -28,14 +28,24 @@ export const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGat
         const content = JSON.parse(body);
         response = {
             statusCode: 200,
-            body: JSON.stringify({
-                data: content,
-            }),
+            headers: {
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Access-Control-Allow-Origin": "http://localhost:4000",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Credentials": "true"
+            },
+            body: JSON.stringify(body),
         };
     } catch (err) {
         console.log(err);
         response = {
             statusCode: 500,
+            headers: {
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Access-Control-Allow-Origin": "http://localhost:4000",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Credentials": "true"
+            },
             body: JSON.stringify({
                 message: 'some error happened',
             }),
