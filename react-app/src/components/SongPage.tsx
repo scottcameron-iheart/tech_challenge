@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from './Table';
 import { Link } from 'react-router-dom';
-import SongListApi from '../api/SongListApi'
+import SongListApi from '../api/SongApi'
 import Song from '../interface/Song'
 
 const { useEffect, useState } = React;
