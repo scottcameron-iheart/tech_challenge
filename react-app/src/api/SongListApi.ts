@@ -3,10 +3,11 @@ import Song from '../interface/Song'
 
 export default class SongListApi {
     async getSongData(): Promise<Song[]> {
-        const url = 'localhost:3000/songs'
+        const url = 'http://localhost:3000/songs';
         try {
             const response = await axios.get(url, {
                 withCredentials: true,
+                headers: { 'Access-Control-Allow-Origin': '*' },
             });
             const data = JSON.parse(response.data);
             return new Promise(resolve => resolve(data));
