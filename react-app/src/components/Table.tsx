@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { FC } from 'react';
+import Song from '../interface/Song';
 import TableItem from './TableItem';
 
 const { useState } = React;
 
+interface tableProps {
+    songData: Song[] | undefined
+}
 
-function Table() {
+
+function Table({ songData }: tableProps) {
 
 
     return (
