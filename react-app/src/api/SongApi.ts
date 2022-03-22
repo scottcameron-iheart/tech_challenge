@@ -14,5 +14,4 @@ export default class SongListApi {
             return new Promise((resolve, reject) => reject(err));
         }
     }
-
 }
