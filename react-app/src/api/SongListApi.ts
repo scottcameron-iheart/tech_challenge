@@ -1,12 +1,20 @@
-import axios from 'axios';
+import axios, { AxiosInstance } from 'axios';
 import Song from '../interface/Song'
 
 export default class SongListApi {
-    async getSongData(): Promise<Song[]> {
-        const url = 'http://localhost:3000'
+    private axiosInstance: AxiosInstance
+
+    constructor() {
+        this.axiosInstance = axios.create({
+            baseURL: 'http://localhost:3000',
+            withCredentials: true,
+        })
+    }
+
+    public async getSongData(): Promise<Song[]> {
 
         try {
-            const response = await axios.get(url);
+            const response = await this.axiosInstance.get('/songs');
             const data = JSON.parse(response.data);
             return new Promise(resolve => resolve(data));
         } catch (err) {
