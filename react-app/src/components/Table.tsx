@@ -4,6 +4,7 @@ import TableItem from './TableItem';
 import './Table.css'
 import { constants } from '../helper/constants';
 import songSorter from '../helper/songSorter';
+import { isNullishCoalesce } from 'typescript';
 
 const { useState } = React;
 
@@ -36,23 +37,22 @@ function Table({ songData, columnNames }: TableProps) {
         setSortDirection(newSortDirection);
         setSortByColumn(columnName ?? '');
         setDisplayList(newDisplayList);
-
-        // append col header to indicate sort direction
-        const pTag = divTarget.firstChild;
-        if (pTag) {
-            const text = pTag.textContent;
-            pTag.textContent = `${text} (${newSortDirection})`;
-        }
     }
 
     return (
         <div className="table-wrapper">
             <div className="table-header">
                 {columnNames.map((name, i) => {
-                    const colClass = `table-cell col-${i}`
+                    const colClass = `table-cell col-${i} header-cell`
+                    const sortArrow = name === sortByColumn
+                        ? sortDirection === constants.asc
+                            ? '↑' // up arrow
+                            : '↓' // down arrow
+                        : '';
                     return (
                         <div className={colClass} data-column={name} key={name} onClick={headerClickHandler}>
-                            <p>{name}</p>
+                            <p>{name} {sortArrow}</p>
+
                         </div>
                     )
                 })}

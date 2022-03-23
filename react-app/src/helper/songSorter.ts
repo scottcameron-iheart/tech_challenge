@@ -10,8 +10,6 @@ export default function songSorter(songList: Song[], colName: string): Song[] {
     const testValue: any = songList[0][colName];
     let colType = typeof testValue;
 
-    debugger;
-
     if (colType === 'string') {
         let d = new Date(testValue);
         if (d instanceof Date && !isNaN(d.valueOf())) {

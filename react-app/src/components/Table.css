@@ -25,6 +25,10 @@
     border: 1px solid black;
 }
 
-.table-cell p{
+.table-cell p {
     width: 15em;
+}
+
+.header-cell {
+    user-select: none;
 }
