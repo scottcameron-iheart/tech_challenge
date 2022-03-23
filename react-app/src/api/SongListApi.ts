@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from 'axios';
+import axios from 'axios';
 import Song from '../interface/Song'
 
 export default class SongListApi {

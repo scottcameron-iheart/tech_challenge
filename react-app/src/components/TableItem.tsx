@@ -1,9 +1,24 @@
 import React from 'react';
+import Song from '../interface/Song';
+import './TableItem.css'
 
-function TableItem() {
+interface TableItemProps {
+    song: Song;
+}
+
+function TableItem({ song }: TableItemProps) {
+
+
     return (
         <div className="table-item">
-            <p>table item</p>
+            {Object.values(song).map((val, i) => {
+                const colClass = `table-cell col-${i}`
+                return (
+                    <div className={colClass} key={val + '-' + i}>
+                        <p>{val}</p>
+                    </div>
+                )
+            })}
         </div>
     );
 }

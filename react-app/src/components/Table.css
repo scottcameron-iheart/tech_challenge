@@ -1,0 +1,30 @@
+.table-wrapper {
+    margin: 0 auto;
+    width: 95%;
+    height: 80vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: column;
+}
+
+.table-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex: 0 1 auto; 
+}
+
+.table-body {
+    flex: 1 1 auto;
+}
+
+.table-cell {
+    padding: .3em;
+    height: 3em;
+    border: 1px solid black;
+}
+
+.table-cell p{
+    width: 15em;
+}
