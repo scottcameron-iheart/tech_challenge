@@ -1,29 +1,21 @@
 import React from 'react';
 import Table from './Table';
 import { Link } from 'react-router-dom';
-import SongListApi from '../api/SongListApi'
 import Song from '../interface/Song'
 import './SongPage.css'
 
 const { useEffect, useState } = React;
 
-function SongPage() {
-    const [songData, setSongData] = useState<Song[] | undefined>();
-    const [isLoading, setIsLoading] = useState(true);
-    const [columnNames, setColumnNames] = useState(['']);
+interface SongProps {
+    songData: Song[] | undefined,
+    isLoading: boolean,
+    columnNames: string[],
+    hasError: boolean,
+}
 
-    useEffect(() => {
-        const songApi = new SongListApi();
-        songApi.getSongData()
-            .then(data => {
-                setSongData(data);
-                setIsLoading(false);
-                setColumnNames(Object.keys(data[0]));
-                console.log('Song data Loaded');
-            }).catch(() => {
-                console.log('Issue retrieving song data in SongPage component.');
-            })
-    }, []);
+function SongPage(props: SongProps) {
+
+    const { songData, isLoading, columnNames, hasError } = props;
 
     return (
         <div className="song-page">
@@ -31,9 +23,13 @@ function SongPage() {
                 <Link to="/">Home</Link>
             </nav>
             <h1>Song Table</h1>
-            {isLoading ?
-                <p>Loading...</p> :
-                <Table songData={songData} columnNames={columnNames}></Table>
+            {hasError ?
+                <p>Sorry, an error has occured. Check that your local aws sam local api is running
+                    or the console logs for more details.
+                </p> :
+                isLoading ?
+                    <p>Loading...</p> :
+                    <Table songData={songData} columnNames={columnNames}></Table>
             }
 
         </div>

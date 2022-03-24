@@ -1,4 +1,4 @@
-import React, { SyntheticEvent } from 'react';
+import React, { SyntheticEvent, useEffect } from 'react';
 import Song from '../interface/Song';
 import TableItem from './TableItem';
 import './Table.css'
@@ -8,7 +8,7 @@ import { camelCaseToTitle } from '../helper/strings';
 
 const { useState } = React;
 
-export interface TableProps {
+interface TableProps {
     songData: Song[] | undefined
     columnNames: string[]
 }
