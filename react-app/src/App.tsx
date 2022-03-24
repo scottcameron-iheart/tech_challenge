@@ -27,7 +27,7 @@ function App() {
         setColumnNames(Object.keys(data[0]));
         console.log('Song data Loaded');
       }).catch(() => {
-        console.log('Issue retrieving song data in SongPage component.');
+        console.log('Issue retrieving song data.');
         setHasError(true);
       })
   }, [])

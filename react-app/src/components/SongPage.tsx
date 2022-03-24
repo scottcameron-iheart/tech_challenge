@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import Song from '../interface/Song'
 import './SongPage.css'
 
-const { useEffect, useState } = React;
-
 interface SongProps {
     songData: Song[] | undefined,
     isLoading: boolean,
@@ -24,7 +22,7 @@ function SongPage(props: SongProps) {
             </nav>
             <h1>Song Table</h1>
             {hasError ?
-                <p>Sorry, an error has occured. Check that your local aws sam local api is running
+                <p>Sorry, an error has occured. Check that your AWS SAM local api is running
                     or the console logs for more details.
                 </p> :
                 isLoading ?
