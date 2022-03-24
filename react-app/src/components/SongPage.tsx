@@ -7,7 +7,7 @@ import Song from '../interface/Song'
 const { useEffect, useState } = React;
 
 function SongPage() {
-    const [songData, setSongData] = useState<Song[] | undefined>(undefined);
+    const [songData, setSongData] = useState<Song[] | undefined>();
     const [isLoading, setIsLoading] = useState(true);
     const [columnNames, setColumnNames] = useState(['']);
 
