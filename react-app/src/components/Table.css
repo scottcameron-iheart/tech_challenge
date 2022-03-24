@@ -1,11 +1,10 @@
 .table-wrapper {
-    margin: 0 auto;
+    margin: 1em auto;
     width: 95%;
     height: 80vh;
     overflow: scroll;
     display: flex;
     flex-flow: column;
-    margin: 2em;
 }
 
 .table-header {
@@ -27,6 +26,7 @@
     background-color: #F1BB87;
     display: flex;
     justify-content: center;
+    box-shadow: 1px 2px #bdbdbd;
 }
 
 .table-cell p {

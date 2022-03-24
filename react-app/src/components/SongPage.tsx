@@ -3,6 +3,7 @@ import Table from './Table';
 import { Link } from 'react-router-dom';
 import SongListApi from '../api/SongListApi'
 import Song from '../interface/Song'
+import './SongPage.css'
 
 const { useEffect, useState } = React;
 
@@ -29,7 +30,7 @@ function SongPage() {
             <nav>
                 <Link to="/">Home</Link>
             </nav>
-            <h1>Song List</h1>
+            <h1>Song Table</h1>
             {isLoading ?
                 <p>Loading...</p> :
                 <Table songData={songData} columnNames={columnNames}></Table>

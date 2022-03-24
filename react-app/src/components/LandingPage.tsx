@@ -12,17 +12,18 @@ function LandingPage() {
             <div className='intro'>
                 <p>Hello,<img src={iHeart} className="iheart-logo" alt="i heart media logo" /> team</p>
                 <p>Thank you for the opportunity to complete this coding challenge. I hope that I fufilled the requirments of the assignment
-                    up to your team's standards. Looking forward to hearing from you after you have assesed my work.
+                    up to your team's standards. I am excited about the prospect of working and learning with you all, and I look forward
+                    to hearing from you.
                 </p>
                 <p> All the best, <br />-Henry</p>
             </div>
-            <Link to="/songs">Go To Song Page</Link>
-            <div className="logo-container">
+            <Link to="/songs">Click here to view the song table</Link>
+            <footer className="logo-container">
                 <h2>Made with: </h2>
                 <img src={logo} className="react-logo" alt="react logo" />
                 <h1>+</h1>
                 <img src={aws} className="aws-logo" alt="aws logo" />
-            </div>
+            </footer>
         </div>
     )
 }

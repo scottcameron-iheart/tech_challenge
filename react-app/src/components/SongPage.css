@@ -1,0 +1,15 @@
+.song-page {
+    width: 100%;
+    height: 100%;
+}
+
+.song-page nav{
+    text-align: right;
+    padding: 1em 2em 0 0;
+}
+
+.song-page h1{
+    text-shadow: 2px 2px #bdbdbd;
+    margin-top: .5em;
+    margin-bottom: .1em;
+}

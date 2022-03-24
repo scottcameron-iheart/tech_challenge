@@ -2,10 +2,9 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    gap: 2vh;
 }
 
 .logo-container {
@@ -14,11 +13,14 @@
     align-items: center;
 }
 
-
+.Landing a{
+    text-decoration: underline;
+}
 
 .intro {
     width: 30em;
     text-align: left;
+    padding-top: 2em;
 }
 
 .iheart-logo {
