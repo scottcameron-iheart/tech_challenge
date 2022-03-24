@@ -2,17 +2,17 @@
     margin: 0 auto;
     width: 95%;
     height: 80vh;
-    overflow-x: scroll;
-    overflow-y: scroll;
+    overflow: scroll;
     display: flex;
     flex-flow: column;
+    margin: 2em;
 }
 
 .table-header {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    flex: 0 1 auto; 
+    flex: 0 1 auto;
 }
 
 .table-body {
@@ -22,13 +22,24 @@
 .table-cell {
     padding: .3em;
     height: 3em;
-    border: 1px solid black;
+    margin: .1em .3em;
+    border-radius: .2em;
+    background-color: #F1BB87;
+    display: flex;
+    justify-content: center;
 }
 
 .table-cell p {
-    width: 15em;
+    width: 13em;
+    margin: auto 0;
+    padding: 0 .2em;
 }
 
 .header-cell {
     user-select: none;
+    background-color: #F78E69;
+}
+
+.sort-selected {
+    background: #ABE188;
 }
