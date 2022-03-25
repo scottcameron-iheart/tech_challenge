@@ -15,7 +15,7 @@ export const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGat
     let response: APIGatewayProxyResult;
 
     const s3 = new S3();
-    const bucket: string = 'iheart-bucket-henry-2022';
+    const bucket: string = 'arn:aws:s3:us-east-1:974298241236:accesspoint/tech-challenge-iheart-bucket';
     const key: string = 'songData.json';
     const params: S3.Types.GetObjectRequest = {
         Bucket: bucket,
