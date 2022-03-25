@@ -1,5 +1,23 @@
- # iHeartMedia - Music Lab - Code Challenge
+# iHeartMedia - Music Lab - Code Challenge
 
+## Startup
+### Prerequisites
+1. install node
+2. install aws sam cli
+
+### Start AWS SAM App
+From the /aws-graph/src directory, run `npm start`.
+
+This will compile all the typescript files and output a build of the service into the .aws-sam directory
+next it will run a api instance at [localhost:3000/graphql](localhost:3000/graphql)
+
+### Start React App
+On a separate terminal, navigate to the /react-app directory and run `npm start`.
+
+This will start the React app on [localhost:4000](localhost:4000)
+
+
+## Requirements
 Create a React application that shows a list of songs with their information and metrics displayed. The app should have at least **2 pages (views)**:
 A landing page, and a page to show data coming from an API.
 
