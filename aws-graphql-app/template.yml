@@ -1,0 +1,48 @@
+---
+Description: GraphQL server on AWS lambda
+
+Globals:
+  Function:
+    Timeout: 10
+  Api:
+    Cors:
+        AllowCredentials: "'true'"
+        AllowOrigin: "'*'"
+        AllowMethods: "'POST, GET, OPTIONS'"
+        AllowHeaders: "'content-type'"
+
+Resources:
+  LambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: index.handler
+      Description: GraphQL Apollo Server
+      Runtime: nodejs14.x
+      Architectures:
+        - x86_64
+      Events:
+        GraphQLEvent:
+          Type: Api 
+          Properties:
+            Path: /graphql
+            Method: ANY
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true
+        EntryPoints:
+        - index.ts
+
+Outputs:
+  GraphQLApi:
+    Description: "API Gateway endpoint URL for Prod stage for Hello World function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/graphql/"
+  GraphQLFunction:
+    Description: "GraphQL Lambda Function ARN"
+    Value: !GetAtt GraphQLFunction.Arn
+  GraphQLFunctionIamRole:
+    Description: "Implicit IAM Role created for GraphQL function"
+    Value: !GetAtt GraphQLFunctionRole.Arn
