@@ -8,8 +8,8 @@
 ### Start AWS SAM App
 From the /aws-graph/src directory, run `npm start`.
 
-This will compile all the typescript files and output a build of the service into the .aws-sam directory
-next it will run a api instance at [localhost:3000/graphql](localhost:3000/graphql)
+This will compile the typescript files and output a build of the service into the .aws-sam directory. This may take a minute or two to complete.
+Finally, an api instance will start at [localhost:3000/graphql](localhost:3000/graphql)
 
 ### Start React App
 On a separate terminal, navigate to the /react-app directory and run `npm start`.
